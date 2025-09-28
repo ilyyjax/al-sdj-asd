@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>WiggaLiquid</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+</head>
+<body>
+  <!-- Landing Screen -->
+  <div id="landing">
+    <div class="landing-content">
+      <h1>Welcome to <span class="highlight">WiggaLiquid</span></h1>
+      <p>A DEX for the Wiggas</p>
+      <button id="enterBtn">Enter App</button>
+    </div>
+  </div>
+
+  <!-- Main App -->
+  <div id="app" class="hidden">
+    <header>
+      <h1>WiggaLiquid (WL)</h1>
+      <button id="connectBtn">Connect Wallet</button>
+    </header>
+
+    <main>
+      <section id="chartContainer" class="card">
+        <div id="chart"></div>
+      </section>
+
+      <section id="swap" class="card">
+        <h2>Swap</h2>
+        <button class="swap-btn">Connect Wallet</button>
+      </section>
+
+      <section id="chat" class="card">
+        <h2>Chat</h2>
+        <div id="chatBox"></div>
+        <div class="chat-controls">
+          <input type="text" id="chatInput" placeholder="Type a message..."/>
+          <button id="sendBtn">Send</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Powered by WiggaLiquid</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
