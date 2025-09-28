@@ -1,0 +1,227 @@
+/* General reset */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background-color: #121212;
+  color: #f5f5f5;
+  overflow-x: hidden;
+}
+
+/* Landing Page */
+#landing {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, #1e1e1e, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  animation: fadeIn 1s ease-out;
+  transition: opacity 1s ease;
+}
+
+.landing-content {
+  text-align: center;
+  animation: slideUp 1.2s ease-out;
+}
+
+.landing-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.landing-content .highlight {
+  color: #ff9900;
+  text-shadow: 0 0 8px rgba(255, 153, 0, 0.8);
+}
+
+.landing-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+#enterBtn {
+  padding: 12px 24px;
+  background-color: #ff9900;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(255,153,0,0.5);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+#enterBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(255,153,0,0.7);
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-out;
+}
+
+/* Hidden state */
+.hidden {
+  display: none;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1e1e1e;
+  border-bottom: 2px solid #ff9900;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+header h1 {
+  color: #ff9900;
+}
+
+#connectBtn {
+  padding: 8px 16px;
+  background-color: #ff9900;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(255,153,0,0.5);
+  transition: all 0.3s ease;
+}
+#connectBtn:hover {
+  transform: scale(1.05);
+}
+
+/* Layout */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1s;
+}
+
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards */
+.card {
+  background: #1e1e1e;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+/* Chart */
+#chartContainer {
+  width: 100%;
+  height: 600px;
+}
+#chart {
+  width: 100%;
+  height: 100%;
+}
+
+/* Swap */
+.swap-btn {
+  background-color: #ff9900;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(255,153,0,0.5);
+  transition: transform 0.2s ease;
+}
+.swap-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Chat */
+#chatBox {
+  height: 200px;
+  overflow-y: auto;
+  background: #000;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px rgba(255,153,0,0.2);
+  scroll-behavior: smooth;
+}
+
+#chatBox::-webkit-scrollbar {
+  width: 8px;
+}
+#chatBox::-webkit-scrollbar-thumb {
+  background: #ff9900;
+  border-radius: 4px;
+}
+
+.chat-controls {
+  display: flex;
+}
+
+#chatInput {
+  flex: 1;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+  margin-right: 5px;
+}
+
+#sendBtn {
+  padding: 8px 16px;
+  background-color: #ff9900;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(255,153,0,0.5);
+  transition: transform 0.2s ease;
+}
+#sendBtn:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #1e1e1e;
+  border-top: 2px solid #ff9900;
+  margin-top: 20px;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.5);
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
